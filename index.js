@@ -14,512 +14,111 @@ app.get('/', (req, res) => {
 
 //get a list of 5 jokes 
 app.get('/jokes', (req, res, next) => {
+
     const jokes = [
-        {
-            "id": 1,
-            "title": "Joke Title 1",
-            "content": "This is the content of joke number 1. It's a funny one!"
-        },
-        {
-            "id": 2,
-            "title": "Joke Title 1",
-            "content": "This is the content of joke number 2. It's a funny one!"
-        },
-        {
-            "id": 3,
-            "title": "Joke Title 1",
-            "content": "This is the content of joke number 3. It's a funny one!"
-        },
-        {
-            "id": 4,
-            "title": "Joke Title 4",
-            "content": "This is the content of joke number 4. It's a funny one!"
-        },
-        {
-            "id": 5,
-            "title": "Joke Title 5",
-            "content": "This is the content of joke number 5. It's a funny one!"
-        },
-        {
-            "id": 6,
-            "title": "Joke Title 6",
-            "content": "This is the content of joke number 6. It's a funny one!"
-        },
-        {
-            "id": 7,
-            "title": "Joke Title 7",
-            "content": "This is the content of joke number 7. It's a funny one!"
-        },
-        {
-            "id": 8,
-            "title": "Joke Title 8",
-            "content": "This is the content of joke number 8. It's a funny one!"
-        },
-        {
-            "id": 9,
-            "title": "Joke Title 9",
-            "content": "This is the content of joke number 9. It's a funny one!"
-        },
-        {
-            "id": 10,
-            "title": "Joke Title 10",
-            "content": "This is the content of joke number 10. It's a funny one!"
-        },
-        {
-            "id": 11,
-            "title": "Joke Title 11",
-            "content": "This is the content of joke number 11. It's a funny one!"
-        },
-        {
-            "id": 12,
-            "title": "Joke Title 12",
-            "content": "This is the content of joke number 12. It's a funny one!"
-        },
-        {
-            "id": 13,
-            "title": "Joke Title 13",
-            "content": "This is the content of joke number 13. It's a funny one!"
-        },
-        {
-            "id": 14,
-            "title": "Joke Title 14",
-            "content": "This is the content of joke number 14. It's a funny one!"
-        },
-        {
-            "id": 15,
-            "title": "Joke Title 15",
-            "content": "This is the content of joke number 15. It's a funny one!"
-        },
-        {
-            "id": 16,
-            "title": "Joke Title 16",
-            "content": "This is the content of joke number 16. It's a funny one!"
-        },
-        {
-            "id": 17,
-            "title": "Joke Title 17",
-            "content": "This is the content of joke number 17. It's a funny one!"
-        },
-        {
-            "id": 18,
-            "title": "Joke Title 18",
-            "content": "This is the content of joke number 18. It's a funny one!"
-        },
-        {
-            "id": 19,
-            "title": "Joke Title 19",
-            "content": "This is the content of joke number 19. It's a funny one!"
-        },
-        {
-            "id": 20,
-            "title": "Joke Title 20",
-            "content": "This is the content of joke number 20. It's a funny one!"
-        },
-        {
-            "id": 21,
-            "title": "Joke Title 21",
-            "content": "This is the content of joke number 21. It's a funny one!"
-        },
-        {
-            "id": 22,
-            "title": "Joke Title 22",
-            "content": "This is the content of joke number 22. It's a funny one!"
-        },
-        {
-            "id": 23,
-            "title": "Joke Title 23",
-            "content": "This is the content of joke number 23. It's a funny one!"
-        },
-        {
-            "id": 24,
-            "title": "Joke Title 24",
-            "content": "This is the content of joke number 24. It's a funny one!"
-        },
-        {
-            "id": 25,
-            "title": "Joke Title 25",
-            "content": "This is the content of joke number 25. It's a funny one!"
-        },
-        {
-            "id": 26,
-            "title": "Joke Title 26",
-            "content": "This is the content of joke number 26. It's a funny one!"
-        },
-        {
-            "id": 27,
-            "title": "Joke Title 27",
-            "content": "This is the content of joke number 27. It's a funny one!"
-        },
-        {
-            "id": 28,
-            "title": "Joke Title 28",
-            "content": "This is the content of joke number 28. It's a funny one!"
-        },
-        {
-            "id": 29,
-            "title": "Joke Title 29",
-            "content": "This is the content of joke number 29. It's a funny one!"
-        },
-        {
-            "id": 30,
-            "title": "Joke Title 30",
-            "content": "This is the content of joke number 30. It's a funny one!"
-        },
-        {
-            "id": 31,
-            "title": "Joke Title 31",
-            "content": "This is the content of joke number 31. It's a funny one!"
-        },
-        {
-            "id": 32,
-            "title": "Joke Title 32",
-            "content": "This is the content of joke number 32. It's a funny one!"
-        },
-        {
-            "id": 33,
-            "title": "Joke Title 33",
-            "content": "This is the content of joke number 33. It's a funny one!"
-        },
-        {
-            "id": 34,
-            "title": "Joke Title 34",
-            "content": "This is the content of joke number 34. It's a funny one!"
-        },
-        {
-            "id": 35,
-            "title": "Joke Title 35",
-            "content": "This is the content of joke number 35. It's a funny one!"
-        },
-        {
-            "id": 36,
-            "title": "Joke Title 36",
-            "content": "This is the content of joke number 36. It's a funny one!"
-        },
-        {
-            "id": 37,
-            "title": "Joke Title 37",
-            "content": "This is the content of joke number 37. It's a funny one!"
-        },
-        {
-            "id": 38,
-            "title": "Joke Title 38",
-            "content": "This is the content of joke number 38. It's a funny one!"
-        },
-        {
-            "id": 39,
-            "title": "Joke Title 39",
-            "content": "This is the content of joke number 39. It's a funny one!"
-        },
-        {
-            "id": 40,
-            "title": "Joke Title 40",
-            "content": "This is the content of joke number 40. It's a funny one!"
-        },
-        {
-            "id": 41,
-            "title": "Joke Title 41",
-            "content": "This is the content of joke number 41. It's a funny one!"
-        },
-        {
-            "id": 42,
-            "title": "Joke Title 42",
-            "content": "This is the content of joke number 42. It's a funny one!"
-        },
-        {
-            "id": 43,
-            "title": "Joke Title 43",
-            "content": "This is the content of joke number 43. It's a funny one!"
-        },
-        {
-            "id": 44,
-            "title": "Joke Title 44",
-            "content": "This is the content of joke number 44. It's a funny one!"
-        },
-        {
-            "id": 45,
-            "title": "Joke Title 45",
-            "content": "This is the content of joke number 45. It's a funny one!"
-        },
-        {
-            "id": 46,
-            "title": "Joke Title 46",
-            "content": "This is the content of joke number 46. It's a funny one!"
-        },
-        {
-            "id": 47,
-            "title": "Joke Title 47",
-            "content": "This is the content of joke number 47. It's a funny one!"
-        },
-        {
-            "id": 48,
-            "title": "Joke Title 48",
-            "content": "This is the content of joke number 48. It's a funny one!"
-        },
-        {
-            "id": 49,
-            "title": "Joke Title 49",
-            "content": "This is the content of joke number 49. It's a funny one!"
-        },
-        {
-            "id": 50,
-            "title": "Joke Title 50",
-            "content": "This is the content of joke number 50. It's a funny one!"
-        },
-        {
-            "id": 51,
-            "title": "Joke Title 51",
-            "content": "This is the content of joke number 51. It's a funny one!"
-        },
-        {
-            "id": 52,
-            "title": "Joke Title 52",
-            "content": "This is the content of joke number 52. It's a funny one!"
-        },
-        {
-            "id": 53,
-            "title": "Joke Title 53",
-            "content": "This is the content of joke number 53. It's a funny one!"
-        },
-        {
-            "id": 54,
-            "title": "Joke Title 54",
-            "content": "This is the content of joke number 54. It's a funny one!"
-        },
-        {
-            "id": 55,
-            "title": "Joke Title 55",
-            "content": "This is the content of joke number 55. It's a funny one!"
-        },
-        {
-            "id": 56,
-            "title": "Joke Title 56",
-            "content": "This is the content of joke number 56. It's a funny one!"
-        },
-        {
-            "id": 57,
-            "title": "Joke Title 57",
-            "content": "This is the content of joke number 57. It's a funny one!"
-        },
-        {
-            "id": 58,
-            "title": "Joke Title 58",
-            "content": "This is the content of joke number 58. It's a funny one!"
-        },
-        {
-            "id": 59,
-            "title": "Joke Title 59",
-            "content": "This is the content of joke number 59. It's a funny one!"
-        },
-        {
-            "id": 60,
-            "title": "Joke Title 60",
-            "content": "This is the content of joke number 60. It's a funny one!"
-        },
-        {
-            "id": 61,
-            "title": "Joke Title 61",
-            "content": "This is the content of joke number 61. It's a funny one!"
-        },
-        {
-            "id": 62,
-            "title": "Joke Title 62",
-            "content": "This is the content of joke number 62. It's a funny one!"
-        },
-        {
-            "id": 63,
-            "title": "Joke Title 63",
-            "content": "This is the content of joke number 63. It's a funny one!"
-        },
-        {
-            "id": 64,
-            "title": "Joke Title 64",
-            "content": "This is the content of joke number 64. It's a funny one!"
-        },
-        {
-            "id": 65,
-            "title": "Joke Title 65",
-            "content": "This is the content of joke number 65. It's a funny one!"
-        },
-        {
-            "id": 66,
-            "title": "Joke Title 66",
-            "content": "This is the content of joke number 66. It's a funny one!"
-        },
-        {
-            "id": 67,
-            "title": "Joke Title 67",
-            "content": "This is the content of joke number 67. It's a funny one!"
-        },
-        {
-            "id": 68,
-            "title": "Joke Title 68",
-            "content": "This is the content of joke number 68. It's a funny one!"
-        },
-        {
-            "id": 69,
-            "title": "Joke Title 69",
-            "content": "This is the content of joke number 69. It's a funny one!"
-        },
-        {
-            "id": 70,
-            "title": "Joke Title 70",
-            "content": "This is the content of joke number 70. It's a funny one!"
-        },
-        {
-            "id": 71,
-            "title": "Joke Title 71",
-            "content": "This is the content of joke number 71. It's a funny one!"
-        },
-        {
-            "id": 72,
-            "title": "Joke Title 72",
-            "content": "This is the content of joke number 72. It's a funny one!"
-        },
-        {
-            "id": 73,
-            "title": "Joke Title 73",
-            "content": "This is the content of joke number 73. It's a funny one!"
-        },
-        {
-            "id": 74,
-            "title": "Joke Title 74",
-            "content": "This is the content of joke number 74. It's a funny one!"
-        },
-        {
-            "id": 75,
-            "title": "Joke Title 75",
-            "content": "This is the content of joke number 75. It's a funny one!"
-        },
-        {
-            "id": 76,
-            "title": "Joke Title 76",
-            "content": "This is the content of joke number 76. It's a funny one!"
-        },
-        {
-            "id": 77,
-            "title": "Joke Title 77",
-            "content": "This is the content of joke number 77. It's a funny one!"
-        },
-        {
-            "id": 78,
-            "title": "Joke Title 78",
-            "content": "This is the content of joke number 78. It's a funny one!"
-        },
-        {
-            "id": 79,
-            "title": "Joke Title 79",
-            "content": "This is the content of joke number 79. It's a funny one!"
-        },
-        {
-            "id": 80,
-            "title": "Joke Title 80",
-            "content": "This is the content of joke number 80. It's a funny one!"
-        },
-        {
-            "id": 81,
-            "title": "Joke Title 81",
-            "content": "This is the content of joke number 81. It's a funny one!"
-        },
-        {
-            "id": 82,
-            "title": "Joke Title 82",
-            "content": "This is the content of joke number 82. It's a funny one!"
-        },
-        {
-            "id": 83,
-            "title": "Joke Title 83",
-            "content": "This is the content of joke number 83. It's a funny one!"
-        },
-        {
-            "id": 84,
-            "title": "Joke Title 84",
-            "content": "This is the content of joke number 84. It's a funny one!"
-        },
-        {
-            "id": 85,
-            "title": "Joke Title 85",
-            "content": "This is the content of joke number 85. It's a funny one!"
-        },
-        {
-            "id": 86,
-            "title": "Joke Title 86",
-            "content": "This is the content of joke number 86. It's a funny one!"
-        },
-        {
-            "id": 87,
-            "title": "Joke Title 87",
-            "content": "This is the content of joke number 87. It's a funny one!"
-        },
-        {
-            "id": 88,
-            "title": "Joke Title 88",
-            "content": "This is the content of joke number 88. It's a funny one!"
-        },
-        {
-            "id": 89,
-            "title": "Joke Title 89",
-            "content": "This is the content of joke number 89. It's a funny one!"
-        },
-        {
-            "id": 90,
-            "title": "Joke Title 90",
-            "content": "This is the content of joke number 90. It's a funny one!"
-        },
-        {
-            "id": 91,
-            "title": "Joke Title 91",
-            "content": "This is the content of joke number 91. It's a funny one!"
-        },
-        {
-            "id": 92,
-            "title": "Joke Title 92",
-            "content": "This is the content of joke number 92. It's a funny one!"
-        },
-        {
-            "id": 93,
-            "title": "Joke Title 93",
-            "content": "This is the content of joke number 93. It's a funny one!"
-        },
-        {
-            "id": 94,
-            "title": "Joke Title 94",
-            "content": "This is the content of joke number 94. It's a funny one!"
-        },
-        {
-            "id": 95,
-            "title": "Joke Title 95",
-            "content": "This is the content of joke number 95. It's a funny one!"
-        },
-        {
-            "id": 96,
-            "title": "Joke Title 96",
-            "content": "This is the content of joke number 96. It's a funny one!"
-        },
-        {
-            "id": 97,
-            "title": "Joke Title 97",
-            "content": "This is the content of joke number 97. It's a funny one!"
-        },
-        {
-            "id": 98,
-            "title": "Joke Title 98",
-            "content": "This is the content of joke number 98. It's a funny one!"
-        },
-        {
-            "id": 99,
-            "title": "Joke Title 99",
-            "content": "This is the content of joke number 99. It's a funny one!"
-        },
-        {
-            "id": 100,
-            "title": "Joke Title 100",
-            "content": "This is the content of joke number 100. It's a funny one!"
-        }
-    ]
-
-    res.send(jokes)
-});
-
+        { "id": 1, "title": "Joke 1", "content": "Why don’t skeletons fight each other? They don’t have the guts." },
+        { "id": 2, "title": "Joke 2", "content": "Why don’t programmers like nature? It has too many bugs." },
+        { "id": 3, "title": "Joke 3", "content": "Why did the web developer go broke? Because he used up all his cache." },
+        { "id": 4, "title": "Joke 4", "content": "Why did the chicken join a band? Because it had the drumsticks." },
+        { "id": 5, "title": "Joke 5", "content": "Why don’t eggs tell jokes? Because they might crack up." },
+        { "id": 6, "title": "Joke 6", "content": "I told my wife she was drawing her eyebrows too high. She looked surprised." },
+        { "id": 7, "title": "Joke 7", "content": "I told my computer I needed a break, and now it won’t stop sending me Kit-Kats." },
+        { "id": 8, "title": "Joke 8", "content": "What do you call fake spaghetti? An impasta." },
+        { "id": 9, "title": "Joke 9", "content": "How does a penguin build its house? Igloos it together." },
+        { "id": 10, "title": "Joke 10", "content": "What do you call cheese that isn't yours? Nacho cheese." },
+        { "id": 11, "title": "Joke 11", "content": "I couldn’t figure out why I had a headache. Then I realized it was all in my head." },
+        { "id": 12, "title": "Joke 12", "content": "Why don't skeletons ever use cell phones? They don't have the guts." },
+        { "id": 13, "title": "Joke 13", "content": "Why was the math book sad? Because it had too many problems." },
+        { "id": 14, "title": "Joke 14", "content": "Why don’t some couples go to the gym? Because some relationships don’t work out." },
+        { "id": 15, "title": "Joke 15", "content": "Why was the computer cold? It left its Windows open." },
+        { "id": 16, "title": "Joke 16", "content": "Why can’t you trust an atom? They make up everything." },
+        { "id": 17, "title": "Joke 17", "content": "What did the left eye say to the right eye? Between you and me, something smells." },
+        { "id": 18, "title": "Joke 18", "content": "What does a cloud wear under his raincoat? Thunderwear." },
+        { "id": 19, "title": "Joke 19", "content": "How do you organize a space party? You planet." },
+        { "id": 20, "title": "Joke 20", "content": "Why don't oysters donate to charity? Because they're shellfish." },
+        { "id": 21, "title": "Joke 21", "content": "What did the janitor say when he jumped out of the closet? Supplies!" },
+        { "id": 22, "title": "Joke 22", "content": "What do you call a pile of cats? A meow-tain." },
+        { "id": 23, "title": "Joke 23", "content": "What do you call a bear with no teeth? A gummy bear." },
+        { "id": 24, "title": "Joke 24", "content": "Why do bees have sticky hair? Because they use honeycombs." },
+        { "id": 25, "title": "Joke 25", "content": "Why can't you hear a pterodactyl go to the bathroom? Because the P is silent." },
+        { "id": 26, "title": "Joke 26", "content": "What’s orange and sounds like a parrot? A carrot." },
+        { "id": 27, "title": "Joke 27", "content": "Why did the scarecrow win an award? Because he was outstanding in his field." },
+        { "id": 28, "title": "Joke 28", "content": "Why don’t some couples go to the gym? Because some relationships don’t work out." },
+        { "id": 29, "title": "Joke 29", "content": "I asked the librarian if the library had any books on paranoia. She whispered, 'They're right behind you.'" },
+        { "id": 30, "title": "Joke 30", "content": "Why are frogs so happy? Because they eat whatever bugs them." },
+        { "id": 31, "title": "Joke 31", "content": "What did one ocean say to the other ocean? Nothing, they just waved." },
+        { "id": 32, "title": "Joke 32", "content": "Why don’t ants get sick? Because they have tiny ant-bodies." },
+        { "id": 33, "title": "Joke 33", "content": "Why did the golfer bring two pairs of pants? In case he got a hole in one." },
+        { "id": 34, "title": "Joke 34", "content": "What’s brown and sticky? A stick." },
+        { "id": 35, "title": "Joke 35", "content": "Why did the tomato turn red? Because it saw the salad dressing." },
+        { "id": 36, "title": "Joke 36", "content": "Why did the cookie cry? Because his mom was a wafer too long." },
+        { "id": 37, "title": "Joke 37", "content": "Why don’t skeletons fight each other? They don’t have the guts." },
+        { "id": 38, "title": "Joke 38", "content": "Why did the computer keep its mouth shut? It didn’t want to byte." },
+        { "id": 39, "title": "Joke 39", "content": "Why did the bicycle fall over? Because it was two-tired." },
+        { "id": 40, "title": "Joke 40", "content": "Why don’t some couples go to the gym? Because some relationships don’t work out." },
+        { "id": 41, "title": "Joke 41", "content": "How do you catch a squirrel? Climb up in a tree and act like a nut." },
+        { "id": 42, "title": "Joke 42", "content": "Why don’t skeletons use cell phones? They don’t have the guts." },
+        { "id": 43, "title": "Joke 43", "content": "I couldn’t figure out why I was feeling depressed, then I realized it was just a phase." },
+        { "id": 44, "title": "Joke 44", "content": "Why did the bicycle fall over? Because it was two-tired." },
+        { "id": 45, "title": "Joke 45", "content": "Why did the math book look sad? Because it had too many problems." },
+        { "id": 46, "title": "Joke 46", "content": "What do you call an alligator in a vest? An investigator." },
+        { "id": 47, "title": "Joke 47", "content": "Why do cows have hooves instead of feet? Because they lactose." },
+        { "id": 48, "title": "Joke 48", "content": "What do you get when you cross a snowman and a vampire? Frostbite." },
+        { "id": 49, "title": "Joke 49", "content": "Why don’t you ever see elephants hiding in trees? Because they’re really good at it." },
+        { "id": 50, "title": "Joke 50", "content": "Why was the mushroom invited to every party? Because he was a fungi." },
+        { "id": 51, "title": "Joke 51", "content": "Why was the math book sad? Because it had too many problems." },
+        { "id": 52, "title": "Joke 52", "content": "What do you get when you cross a snowman and a vampire? Frostbite." },
+        { "id": 53, "title": "Joke 53", "content": "Why don’t skeletons fight each other? They don’t have the guts." },
+        { "id": 54, "title": "Joke 54", "content": "Why don’t you ever see elephants hiding in trees? Because they’re really good at it." },
+        { "id": 55, "title": "Joke 55", "content": "Why don’t oysters share their pearls? Because they’re shellfish." },
+        { "id": 56, "title": "Joke 56", "content": "What did the banana say to the dog? Bananas can’t talk." },
+        { "id": 57, "title": "Joke 57", "content": "Why did the golfer bring two pairs of pants? In case he got a hole in one." },
+        { "id": 58, "title": "Joke 58", "content": "What do you call a pile of cats? A meow-tain." },
+        { "id": 59, "title": "Joke 59", "content": "Why do cows wear bells? Because their horns don’t work." },
+        { "id": 60, "title": "Joke 60", "content": "What’s the best way to watch a fly fishing tournament? Live stream." },
+        { "id": 61, "title": "Joke 61", "content": "Why don’t skeletons use cell phones? They don’t have the guts." },
+        { "id": 62, "title": "Joke 62", "content": "Why was the computer cold? It left its Windows open." },
+        { "id": 63, "title": "Joke 63", "content": "I told my wife she was drawing her eyebrows too high. She looked surprised." },
+        { "id": 64, "title": "Joke 64", "content": "Why did the scarecrow win an award? Because he was outstanding in his field." },
+        { "id": 65, "title": "Joke 65", "content": "Why don't skeletons ever use cell phones? They don't have the guts." },
+        { "id": 66, "title": "Joke 66", "content": "Why don’t skeletons fight each other? They don’t have the guts." },
+        { "id": 67, "title": "Joke 67", "content": "I don’t trust stairs because they’re always up to something." },
+        { "id": 68, "title": "Joke 68", "content": "I told my computer I needed a break, and now it won’t stop sending me Kit-Kats." },
+        { "id": 69, "title": "Joke 69", "content": "What do you call fake spaghetti? An impasta." },
+        { "id": 70, "title": "Joke 70", "content": "Why did the tomato turn red? Because it saw the salad dressing." },
+        { "id": 71, "title": "Joke 71", "content": "What do you call a bear with no teeth? A gummy bear." },
+        { "id": 72, "title": "Joke 72", "content": "What did the janitor say when he jumped out of the closet? Supplies!" },
+        { "id": 73, "title": "Joke 73", "content": "Why can’t you trust an atom? They make up everything." },
+        { "id": 74, "title": "Joke 74", "content": "How does a penguin build its house? Igloos it together." },
+        { "id": 75, "title": "Joke 75", "content": "I couldn’t figure out why I was feeling depressed, then I realized it was just a phase." },
+        { "id": 76, "title": "Joke 76", "content": "What do you call cheese that isn't yours? Nacho cheese." },
+        { "id": 77, "title": "Joke 77", "content": "How do you organize a space party? You planet." },
+        { "id": 78, "title": "Joke 78", "content": "Why don’t skeletons use cell phones? They don’t have the guts." },
+        { "id": 79, "title": "Joke 79", "content": "What do you get when you cross a snowman and a vampire? Frostbite." },
+        { "id": 80, "title": "Joke 80", "content": "Why don’t ants get sick? Because they have tiny ant-bodies." },
+        { "id": 81, "title": "Joke 81", "content": "Why don’t eggs tell jokes? Because they might crack up." },
+        { "id": 82, "title": "Joke 82", "content": "What’s brown and sticky? A stick." },
+        { "id": 83, "title": "Joke 83", "content": "Why was the mushroom invited to every party? Because he was a fungi." },
+        { "id": 84, "title": "Joke 84", "content": "Why don't skeletons ever use cell phones? They don't have the guts." },
+        { "id": 85, "title": "Joke 85", "content": "What do you call a pile of cats? A meow-tain." },
+        { "id": 86, "title": "Joke 86", "content": "What did the banana say to the dog? Bananas can’t talk." },
+        { "id": 87, "title": "Joke 87", "content": "I told my wife she was drawing her eyebrows too high. She looked surprised." },
+        { "id": 88, "title": "Joke 88", "content": "I told my wife she was drawing her eyebrows too high. She looked surprised." },
+        { "id": 89, "title": "Joke 89", "content": "Why was the scarecrow invited to the party? Because he was outstanding in his field." },
+        { "id": 90, "title": "Joke 90", "content": "Why did the skeleton go to the party alone? He had no body to go with him." },
+        { "id": 91, "title": "Joke 91", "content": "Why did the bicycle fall over? It was two-tired." },
+        { "id": 92, "title": "Joke 92", "content": "What do you call a pile of cats? A meow-tain." },
+        { "id": 93, "title": "Joke 93", "content": "What do you call cheese that isn't yours? Nacho cheese." },
+        { "id": 94, "title": "Joke 94", "content": "I couldn’t figure out why I was feeling depressed, then I realized it was just a phase." },
+        { "id": 95, "title": "Joke 95", "content": "What’s brown and sticky? A stick." },
+        { "id": 96, "title": "Joke 96", "content": "What do you call a bear with no teeth? A gummy bear." },
+        { "id": 97, "title": "Joke 97", "content": "Why did the golfer bring two pairs of pants? In case he got a hole in one." },
+        { "id": 98, "title": "Joke 98", "content": "Why do cows have hooves instead of feet? Because they lactose." },
+        { "id": 99, "title": "Joke 99", "content": "Why don’t oysters donate to charity? Because they’re shellfish." },
+        { "id": 100, "title": "Joke 100", "content": "What did the janitor say when he jumped out of the closet? Supplies!" }
+      ]
+      
+ })
 const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
